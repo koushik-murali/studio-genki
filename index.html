@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Studio Genki</title>
+  <link rel="icon" type="image/png" href="/g-fav.png" />
   <style>
     * {
       box-sizing: border-box;
@@ -37,17 +38,18 @@
     .subtitle {
       font-size: 1.25rem;
       margin: 1rem 0;
+      color: rgb(92, 92, 92);
     }
 
     .button {
       display: inline-block;
-      padding: 0.75rem 1.5rem;
+      padding: 1rem 1.5rem;
       margin: 1rem 0;
       background-color: #222;
       color: white;
       text-decoration: none;
       border-radius: 4px;
-      font-weight: bold;
+      font-weight: medium;
     }
 
     .social-links {
@@ -75,11 +77,48 @@
       color: #555;
     }
 
+    .fade-gallery {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 500px;
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.fade-gallery img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  border-radius: 8px;
+  animation: fade 25s infinite;
+}
+
+.fade-gallery img:nth-child(1) { animation-delay: 0s; }
+.fade-gallery img:nth-child(2) { animation-delay: 5s; }
+.fade-gallery img:nth-child(3) { animation-delay: 10s; }
+.fade-gallery img:nth-child(4) { animation-delay: 15s; }
+.fade-gallery img:nth-child(5) { animation-delay: 20s; }
+
+@keyframes fade {
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  20% { opacity: 1; }
+  25% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
     @media (max-width: 480px) {
       .social-links {
         flex-direction: row;
         gap: 1rem;
       }
+      
     }
   </style>
 </head>
@@ -89,14 +128,23 @@
 
     <div class="subtitle">Pottery studio in Coimbatore</div>
 
-    <a href="https://wa.me/+917373074962?text=Hello" class="button">Contact us</a>
+    <a href="https://wa.me/+917373074962?text=Hello" class="button">Text on WhatsApp</a>
+
+    <div class="fade-gallery">
+    
+            <img src="/image3.png" alt="Gallery 3" />
+            <img src="/image4.png" alt="Gallery 4" />
+            <img src="/image5.png" alt="Gallery 5" />
+            <img src="/image6.png" alt="Gallery 6" />
+            <img src="/image7.png" alt="Gallery 7" />
+      </div>
 
     <div class="social-links">
-      <a href="https://www.instagram.com/m23koushik"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" /></a>
-      <a href="https://substack.com/@koushik"><img src="/substack.png" alt="Substack" /></a>
+      <a href="https://www.instagram.com/m23koushik"><img src="/ig-icon.svg"Instagram" /></a>
+      <a href="https://substack.com/@koushik"><img src="/substack-icon.svg" alt="Substack" /></a>
     </div>
 
-    <a href="#" class="map-link">Find us on Google Maps</a>
+    <a href="https://g.co/kgs/kUYmW2Z" class="map-link">Find us on Google Maps</a>
   </div>
 </body>
 </html>
