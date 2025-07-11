@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Studio Genki</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #fefefe;
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 90%;
+      width: 100%;
+    }
+
+    img.logo {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      margin: 1rem 0;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      margin: 1rem 0;
+      background-color: #222;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .social-links img {
+      width: 32px;
+      height: 32px;
+      filter: grayscale(100%);
+      transition: filter 0.2s;
+    }
+
+    .social-links img:hover {
+      filter: grayscale(0%);
+    }
+
+    .map-link {
+      display: block;
+      margin-top: 1rem;
+      text-decoration: underline;
+      color: #555;
+    }
+
+    @media (max-width: 480px) {
+      .social-links {
+        flex-direction: row;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="/studio-genki.png" alt="Studio Genki Logo" class="logo" />
+
+    <div class="subtitle">Pottery studio in Coimbatore</div>
+
+    <a href="https://wa.me/+917373074962?text=Hello" class="button">Contact us</a>
+
+    <div class="social-links">
+      <a href="https://www.instagram.com/m23koushik"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" /></a>
+      <a href="https://substack.com/@koushik"><img src="/substack.png" alt="Substack" /></a>
+    </div>
+
+    <a href="#" class="map-link">Find us on Google Maps</a>
+  </div>
+</body>
+</html>
